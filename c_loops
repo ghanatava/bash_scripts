@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for ((a=1,b=2;a<5-b;a++,b++))
+do 
+    echo "$a - $b"
+done

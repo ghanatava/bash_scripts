@@ -1,0 +1,13 @@
+#!/bin/bash
+IFS=:
+for dir in $PATH
+do
+    for file in $dir/*
+    do
+        if [ -x $file ]
+	then
+            echo "$file is executable"
+        fi
+    done
+done
+

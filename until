@@ -1,0 +1,11 @@
+#!/bin/bash 
+#until is opposite to while that is loop terminates if condition is true
+
+var=10
+until echo "The number is $var"
+	[ $var -eq 0 ]
+do
+	echo "scale=2; $var * $var" | bc
+	var=$[ $var-1 ]
+done
+

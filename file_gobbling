@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for i in /home/ashura/*
+do 
+     if [ -d "$i" ]
+     then 
+	echo $i is a directory
+     elif [ -f "$i" ]
+     then 
+        echo $i is a file
+     else
+	echo $i is an unknown object
+     fi
+done 

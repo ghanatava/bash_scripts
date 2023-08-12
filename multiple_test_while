@@ -1,0 +1,10 @@
+#!/bin/bash
+
+var=10
+while echo "The number is $var" 
+	[ $var -ge 0  ]
+do 
+
+	echo "scale=3;$var/3" | bc
+	var=$[ $var-1 ]
+done

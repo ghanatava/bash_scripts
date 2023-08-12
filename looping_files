@@ -1,0 +1,16 @@
+#!/bin/bash 
+# We can loop by either nested loops or changing the IFS (field separator)
+
+IFS_OLD=$IFS
+IFS=$'\n'
+
+for entry in $(cat /etc/passwd)
+do
+	echo "The value in $entry is "
+	IFS=:
+	for value in $entry 
+	do 
+	    echo Value is $value
+	done
+done
+ 
