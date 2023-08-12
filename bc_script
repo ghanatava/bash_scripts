@@ -1,0 +1,7 @@
+#!/bin/bash
+#using bash calculator in script
+
+var=$(echo "scale=4; 3.14/5" | bc)
+
+echo result is $var
+

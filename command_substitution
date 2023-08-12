@@ -1,0 +1,12 @@
+#!/bin/bash
+# command substitution refers to assigning output of a command to a variable
+# this can be achieved by either `command` or $(command)
+
+test1=`date`
+echo  "The date and time are "$test1
+
+test2=$(who)
+echo "Let us see who is logged in " $test2
+
+
+
