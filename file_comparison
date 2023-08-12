@@ -1,0 +1,33 @@
+#!/bin/bash
+
+jump_directory=${HOME}
+
+if  [ -d $jump_directory  ]  #check if the given is a directory
+then
+    echo $jump_directory exists
+    cd $jump_directory
+    ls 
+else
+    echo "jump directory does not exist"
+
+fi
+
+
+#check if file or directory object exists by -e
+object=/home/ashura/git-token
+if [ -e $object ] 
+then 
+    echo given objecgt exist but is it a file?
+
+    if [ -f $object  ]
+    then 
+        echo $object is a file
+    else
+	echo $object is not a file 
+    fi
+   
+else
+    echo given object does not exist
+fi
+
+exit 0

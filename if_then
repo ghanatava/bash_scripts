@@ -1,0 +1,12 @@
+#!/bin/bash
+#if-then is different than if-else if the if command is xited with status code 0 than then block is executed
+
+if pwd
+then
+	echo It worked!
+fi
+
+if IamNotaCommand 
+then 
+	echo It worked!
+fi 
