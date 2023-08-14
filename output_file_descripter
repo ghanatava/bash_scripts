@@ -1,0 +1,7 @@
+#!/bin/bash
+# >> redirection is used to append
+
+exec 3>>output.txt
+
+echo "testing custom file descriptor" >&3
+cat output.txt

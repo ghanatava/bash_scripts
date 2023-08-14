@@ -1,0 +1,10 @@
+#!/bin/bash
+
+exec 3<>output.txt
+read line <&3
+echo "Read : $line"
+echo "Write test" >&3
+#to close a file descriptor rediorect to -
+
+exec 3>&-
+cat output.txt

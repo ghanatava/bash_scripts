@@ -1,0 +1,10 @@
+#!/bin/bash
+
+logs=logs.log
+
+echo "first" | tee $logs
+echo "second" | tee -a $logs
+echo "last" | tee -a $logs
+
+cat logs.log
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#redirecting  messages temporarily to stderr
+
+echo "this is a message">&2
+echo "this is normal STDOUT"
+
+# redirecting a file descriptor till the script is running using exec
+
+exec 1>output.txt
+exec 2>errors.txt
+
+echo Testing STDOUT redirection
+echo Testing STDERR redirection >&2
+
+ls badfile
+

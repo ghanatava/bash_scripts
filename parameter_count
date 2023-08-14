@@ -1,0 +1,13 @@
+#!/bin/bash
+#echo getting number of parameters
+
+if [ $# -gt 0  ]
+then 
+	echo there are $# parmeters
+else
+	echo there are no parameters
+fi
+# inside braces do not use $ replace with !
+#example 
+
+echo parameter number $# is ${!#}
