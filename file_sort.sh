@@ -2,10 +2,10 @@
 dir=$1
 
 if [ -d $dir  ]; then 
-        mkdir $dir/pdf
-        mkdir $dir/images
-        mkdir $dir/text
-        mkdir $dir/json
+        mkdir -p $dir/pdf
+        mkdir -p $dir/images
+        mkdir -p $dir/text
+        mkdir -p $dir/json
 else 
     echo "no such file or directory "
     exit 1
