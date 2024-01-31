@@ -4,7 +4,8 @@ dir=$1
 if [ -d $dir  ]; then 
         mkdir $dir/pdf
         mkdir $dir/images
-        mkdir $dir/csv
+        mkdir $dir/text
+        mkdir $dir/json
 else 
     echo "no such file or directory "
     exit 1
@@ -19,8 +20,11 @@ for file in $dir/*; do
            image/*)
                mv $file $dir/images
                ;; 
-           *csv)
-               mv $file $dir/csv
+           text/plain)
+               mv $file $dir/text
+               ;;
+           application/json)
+               mv $file $dir/json
                ;;
             *)
                ;;
