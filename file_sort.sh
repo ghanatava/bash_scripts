@@ -1,10 +1,10 @@
 #!/bin/bash
 dir=$1
 
-if [ -d $dir  ]; then
-    mkdir $dir/pdf
-    mkdir $dir/images
-    mkdir $dir/csv 
+if [ -d $dir  ]; then 
+        mkdir $dir/pdf
+        mkdir $dir/images
+        mkdir $dir/csv
 else 
     echo "no such file or directory "
     exit 1
@@ -19,15 +19,19 @@ for file in $dir/*; do
            image/*)
                mv $file $dir/images
                ;; 
-           text/csv)
+           *csv)
                mv $file $dir/csv
-               ;; 
-           *)
+               ;;
+            *)
                ;;
         esac
     fi
 done
-echo "Files sorted successfully."
+if [ $? -eq 0  ];then 
+    echo Files sorted Successfully
+else
+    echo some error occured
+fi
 
 
 
